@@ -36,29 +36,28 @@ function get() {
     document.getElementById("noi").innerHTML = 35000 +"vnđ"
 }
 
-
-function add() {
-    let product=["kèn","kèn môi","váy","áo","sáo","sáo trúc"];
-    let price=[50000000,200000,2000000,1500000,500000,300000];
-    let string=document.getElementById("tin").value;
+function add(){
+    let product=["áo","váy","sáo trúc","sáo","khèn","khèn môi"]
+    let pcie=["1500000","2000000","300000","500000","5000000","200000"];
+    let string = document.getElementById("tin").value;
+    let str=document.getElementById("io").value;
     let index=0;
-    let result=""
-    let number=document.getElementById("io").value;
     let total=0;
-    for(let i=0;i<product.length;i++){
-        if(string=== product[i]){
-            index=i;
-            for (let j=0; j<price.length;j++){
+    let result=""
+    for (let i=0;i<product.length; i++){
+        if(string===product[i]){
+            index=i
+            for (let j=0;j<pcie.length;j++){
                 if(index===j){
-                    result=price[j]
+                    result=pcie[j]
+
                 }
-
-
+                total=result*str;
             }
+
         }
-    } total=result*number
-    document.getElementById("u").innerHTML=total;
-}
-function TOTAL(){
+
+    }
+   document.getElementById("u").innerHTML=total;
 
 }
